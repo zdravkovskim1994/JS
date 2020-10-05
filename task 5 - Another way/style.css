@@ -1,0 +1,27 @@
+#messageUser, #messagePass {
+    display: none;
+}
+
+.valid {
+color: green;
+}
+
+.valid:before {
+position: relative;
+padding-right: 20px;
+content: "\2714";
+}
+
+.invalid {
+color: red;
+}
+
+.invalid:before {
+position: relative;
+padding-right: 20px;
+content: "\274C";
+}
+
+#password {
+    margin-bottom: 30px;
+}

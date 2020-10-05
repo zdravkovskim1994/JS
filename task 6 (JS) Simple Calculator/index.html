@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+   
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .calculator {
+            position: relative;
+            display: grid;
+        }
+
+        .calculator .num {
+            display: grid;
+            width: 90px;
+            height: 70px;
+            color: black;
+            place-items: center;
+            border: 0.5px solid grey;
+            font-size: 35px;
+            outline: none;
+            
+        }
+
+        .calculator .num:active {
+            background-color: slategray;
+        }
+
+        .calculator #equals:active {
+            background-color: slategray;
+        }
+
+        .calculator .value {
+            grid-column: span 4;
+            background-color: black;
+            height: 150px;
+            width: 360px;
+            color: white;
+            border-radius: 7px 7px 0px 0px;
+            text-align: right;
+            padding-right: 15px;
+            padding-left: 15px;
+            border: none;
+            font-size: 50px;
+           
+        }
+
+        #equals {
+            grid-row: span 4;
+            height: 280px;
+            background-color: rgb(228, 100, 77);
+            border-radius: 0px 0px 7px 0px;
+           
+        }
+
+        #zero {
+            border-radius: 0 0 0 7px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <form class="calculator" name="form">
+        <input class="value" type="text" disabled name="displayResult">
+        <input class="num" type="button" name="plus" value="+" onclick="calcNumbers(plus.value)">
+        <input class="num" type="button" name="minus" value="-" onclick="calcNumbers(minus.value)">
+        <input class="num" type="button" name="x" value="*" onclick="calcNumbers(x.value)">
+        <input class="num" type="button" name="mulb" value="/" onclick="calcNumbers(mulb.value)">
+        <input class="num" type="button" name="key7" value="7" onclick="calcNumbers(key7.value)">
+        <input class="num" type="button" name="key8" value="8" onclick="calcNumbers(key8.value)">
+        <input class="num" type="button" name="key9" value="9" onclick="calcNumbers(key9.value)">
+        <input class="num" id="equals" type="button" name="equals" value="=" onclick="displayResult.value=eval(displayResult.value)">
+        <input class="num" type="button" name="key4" value="4" onclick="calcNumbers(key4.value)">
+        <input class="num" type="button" name="key5" value="5" onclick="calcNumbers(key5.value)">
+        <input class="num" type="button" name="key6" value="6" onclick="calcNumbers(key6.value)">
+        <input class="num" type="button" name="key1" value="1" onclick="calcNumbers(key1.value)">
+        <input class="num" type="button" name="key2" value="2" onclick="calcNumbers(key2.value)">
+        <input class="num" type="button" name="key3" value="3" onclick="calcNumbers(key3.value)">
+        <input class="num" id="zero" type="button" name="key0" value="0" onclick="calcNumbers(key0.value)">
+        <input class="num" type="button" name="decimal" value="." onclick="calcNumbers(decimal.value)">
+        <input class="num" type="button" name="ce" value="CE" onclick="resetDisplay()">
+     
+
+
+        
+    </div>
+
+
+    <script>
+
+        function calcNumbers(result) {
+            form.displayResult.value = form.displayResult.value+result;
+        }
+
+        function resetDisplay() {
+            form.displayResult.value = ' ';
+        }
+    </script>
+</body>
+</html>

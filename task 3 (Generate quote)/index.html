@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <button onclick="generateQuote()" class="btn btn-large d-block m-auto
+         bg-primary text-light shadow-lg">Generate Quote</button>
+        <div class="text-center mt-5">
+            <span>
+                <i class="fa fa-quote-left fa-3x text-secondary">
+                    <span class="display-4 text-secondary" id="quoteDisplay"></span>
+                </i>
+            </span>
+        </div>
+        <div class="text-center mt-5">
+            <span id="author" class="display-4 text-danger"></span>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .counter {
+            width: 350px;
+            height: 400px;
+            background-color: #bae7e7;
+            margin: 0 auto;
+            margin-top: 150px;
+            text-align: center;
+            box-shadow: 4px 4px 5px 5px rgb(202, 200, 200);
+            border-radius: 25px;
+        }
+        div h1 {
+            text-align: center;
+            padding-top: 40px;
+            letter-spacing: 1.2px;
+            font-size: 45px;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+        div #number {
+            text-align: center;
+            font-size: 100px;
+            padding-top: 22px;
+            font-weight: 500;
+        }
+        .btn {
+            margin-top: 50px;
+            text-align: center;
+            text-transform: uppercase;
+            background-color: #e0d6a8;
+            box-shadow: 2px 2px grey;
+            border: none;
+            height: 33px;
+            width: 110px;
+        }
+
+        #btn1 {
+            margin-right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter">
+        <h1>Counter</h1>
+        <div id=number></div>
+        <button class="btn" id="btn1" onclick="button1()">Decrease</button>
+        <button class="btn" onclick="button2()">Increase</button>
+    </div>
+
+    <!-- <script>
+        var x = 0;
+        document.getElementById('number').innerHTML = 0;
+
+        function button1(){
+            document.getElementById('number').innerHTML = --x;
+        }
+
+        function button2(){
+            document.getElementById('number').innerHTML = ++x;
+        }
+    </script> -->
+
+    <script>
+        var x = 0;
+        var element = document.getElementById('number');
+        element.innerHTML = x;
+
+        function button1(){
+            element.innerHTML = --x;
+        }
+
+        function button2(){
+            element.innerHTML = ++x;
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mario">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <link rel="stylesheet" type="text/css" href="Styles/style.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div id="header">
+        <div class="container text-center mt-3">
+            <h1 class="display-5">Our <span class="display-3">Store</span></h1>
+        </div>
+    </div>
+<!-- Search Input -->
+    <div id="searcher">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 d-block m-auto">
+                    <div class="input-group mb-5">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></span>
+                        </div>
+                        <input type="text" id="input" onkeyup="searchFun()" class="form-control mr-1" placeholder="item...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Cards -->
+    <div >
+        <div class="container">
+            <div class="row" id="section">
+                <div class="col-md-6 col-lg-4 mb-5 article">
+                    <div class="card border-0 transform-on-hover">
+                        <a href="#" class="transform-on-hover">
+                            <img src="Resources/sweet-item.jpg" alt="Sweet item" class="card-img-top">
+                        </a>
+                        <div class="card-body">
+                            <h6>Sweet item <span class="float-right">$5</span></h6>
+                        </div> 
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-5 article">
+                    <div class="card border-0 transform-on-hover">
+                        <a href="#" class="transform-on-hover">
+                            <img src="Resources/tiramisu-cake.jpg" alt="Tiramisu cake" class="card-img-top">
+                        </a>
+                        <div class="card-body">
+                            <h6>Tiramisu cake <span class="float-right">$7</span></h6>
+                        </div>  
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-5 article">
+                    <div class="card border-0 transform-on-hover">
+                        <a href="#" class="transform-on-hover">
+                            <img src="Resources/cup-cake.jpg" alt="Cup cake" class="card-img-top">
+                        </a>
+                        <div class="card-body">
+                            <h6>Cup cake <span class="float-right">$3.5</span></h6>
+                        </div>   
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-5 article">
+                    <div class="card border-0 transform-on-hover">
+                        <a href="#" class="transform-on-hover">
+                            <img src="Resources/kinder-bueno.jpg" alt="Kinder bueno" class="card-img-top">
+                        </a>
+                        <div class="card-body">
+                            <h6>Kinder bueno <span class="float-right">$6</span></h6>
+                        </div>  
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-5 article">
+                    <div class="card border-0 transform-on-hover">
+                        <a href="#" class="transform-on-hover">
+                            <img src="Resources/vegan-sponge-cake.jpg" alt="Vegan cake" class="card-img-top">
+                        </a>
+                        <div class="card-body">
+                            <h6>Vegan sponge cake <span class="float-right">$11</span></h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-5 article">
+                    <div class="card border-0 transform-on-hover">
+                        <a href="#" class="transform-on-hover">
+                            <img src="Resources/vegan-twix-bar.jpg" alt="Vegan bar" class="card-img-top">
+                        </a>
+                        <div class="card-body">
+                            <h6>Vegan twix bar <span class="float-right">$4</span></h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-5 article">
+                    <div class="card border-0 transform-on-hover">
+                        <a href="#" class="transform-on-hover">
+                            <img src="Resources/fruit-cake.jpg" alt="Fruit cake" class="card-img-top">
+                        </a>
+                        <div class="card-body">
+                            <h6>Fruit cake <span class="float-right">$12</span></h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-5 article">
+                    <div class="card border-0 transform-on-hover">
+                        <a href="#" class="transform-on-hover">
+                            <img src="Resources/puding-caramel.jpg" alt="Puding caramel" class="card-img-top">
+                        </a>
+                        <div class="card-body">
+                            <h6>Puding caramel <span class="float-right">$2.5</span></h6>
+                        </div>  
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function searchFun() {
+            var input, filter, section, article, item, txtValue, i
+            input = document.getElementById('input');
+            filter = input.value.toUpperCase().trim();
+            section = document.getElementById('section');
+            article = section.getElementsByClassName('article');
+
+            for (i = 0; i < article.length; i++) {
+                item = article[i].getElementsByClassName('card')[0];
+                txtValue = item.textContent || item.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    article[i].style.display = '';
+                } else {
+                    article[i].style.display = 'none';
+                    // article[i].style.cssFloat = "left";
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>

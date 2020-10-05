@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+h1 span {
+    color: rgb(248, 153, 169);
+    font-weight: 500 !important;
+}
+
+.input-group-text {
+    background-color: rgb(248, 153, 169) !important;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (min-width: 768px){
+    .card .transform-on-hover:hover{
+        transform: translateY(-5.5px);
+        transition-delay: 55ms;
+    }
+}

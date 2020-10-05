@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(201, 199, 199);
+        }
+        .message-box {
+            margin-top: 250px !important;
+            background-color: pink;
+            width: 500px;
+            height: 320px;
+        }
+        .form-control {
+            width: 450px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message-box d-block m-auto text-center">
+            <div class="form-group">
+                <label for="messageText" class="py-3 text-capitalize"><h4>A message you would like to pass</h4></label><br>
+                <input onkeydown="msgDisplayEnter(event)"  type="message" autocomplete="off"
+                 id="messageText" class="form-control m-auto d-block">
+            </div>
+            <button onclick="msgDisplay()" class="btn btn-primary my-3">Submit</button>
+            <h4 class="text-capitalize">Last message delivered</h4>
+            <h3 class="py-3 text-primary">
+                <span id="messageOutput"></span>
+            </h3>
+        </div>
+    </div>
+    
+
+
+    <script src="script.js"></script>
+    
+        
+</body>
+</html>

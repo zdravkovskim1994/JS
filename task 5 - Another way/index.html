@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Validation</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 mx-auto mt-5">
+                    <form onsubmit="validate(event)">
+                        <div class="form-group">
+                            <label for="usernameInput">Username</label>
+                            <input type="text" id="username" class="form-control" autocomplete="off"
+                             >  
+                                <div id="messageUser" class="mt-4">
+                                    <p id="charUser" class="invalid">Username must contain minimum <b>5 characters</b></p>
+                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" class="form-control" autocomplete="off"
+                             >
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block" onclick="displayMessage()">Login</button>
+                            <div id="messagePass" class="mt-4">
+                                <p id="lowercase" class="invalid">Password must contain a <b>lowercase</b> letter</p>
+                                <p id="capital" class="invalid">Password must contain a <b>capital (uppercase)</b> letter</p>
+                                <p id="number" class="invalid">Password must contain a <b>number</b></p>
+                                <p id="charPass" class="invalid">password must contain minimum <b>8 characters</b></p>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="script.js"></script>
+    </body>
+</html>
