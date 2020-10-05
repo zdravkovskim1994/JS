@@ -1,0 +1,33 @@
+li i {
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+ul {
+    font-size: 21px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.txtInput {
+    text-transform: capitalize;
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    text-align: center;
+    border-bottom: 4px solid #ced4da;;
+    width: 100%;
+    font-size: larger;
+
+}
+
+.txtInput:focus {
+    outline: none;
+}
+
+li:hover {
+    background-color: #6cddee;
+    transform: translateY(-4.5px);
+    transition-delay: 55ms;
+}
